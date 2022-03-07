@@ -1,11 +1,5 @@
 @use "../../assets/scss/variables" as *;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .card {
   font-family: $font;
   width: $card-width;
@@ -34,6 +28,9 @@
     font-size: 3.4rem;
     .card__number {
       font-weight: bold;
+    }
+    .card__button:hover {
+      cursor: pointer;
     }
   }
 }
