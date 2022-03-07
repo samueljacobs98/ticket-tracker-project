@@ -1,0 +1,40 @@
+@use "../../assets/scss/variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  font-family: $font;
+  width: $card-width;
+  min-height: $card-min-height;
+
+  background-color: $colour-white;
+  border-bottom: 6px solid $colour-card-accent;
+  text-align: center;
+
+  padding: $card-padding;
+  padding-bottom: 0;
+
+  .card__title {
+    font-size: $card-title-size;
+    font-weight: $card-title-weight;
+    margin-bottom: 6px;
+  }
+  .card__role {
+    font-size: $card-role-size;
+    margin-bottom: 16px;
+    color: $colour-grey;
+  }
+  .card__counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3.4rem;
+    .card__number {
+      font-weight: bold;
+    }
+  }
+}

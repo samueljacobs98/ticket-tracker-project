@@ -1,0 +1,17 @@
+@use "../../assets/scss/variables" as *;
+
+.tickets {
+  margin: 40px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, $card-width);
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 40px;
+}
+
+@media screen and (min-width: 782px) {
+  .tickets {
+    margin: 40px 160px;
+    row-gap: 48px;
+  }
+}
