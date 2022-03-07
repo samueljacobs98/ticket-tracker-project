@@ -1,17 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Card.scss";
 
 const Card = ({ name, role }) => {
-  let number = 0;
+  const [count, setCount] = useState(0);
 
-  const decrementNumber = () => {
-    number++;
-    console.log(number);
+  const decrementCount = () => {
+    setCount((previousCount) => previousCount - 1);
   };
-  const incrementNumber = () => {
-    number++;
-    console.log(number);
+  const incrementCount = () => {
+    setCount((previousCount) => previousCount + 1);
   };
 
   return (
@@ -19,11 +17,11 @@ const Card = ({ name, role }) => {
       <p className="card__title">{name}</p>
       <p className="card__role">{role}</p>
       <div className="card__counter">
-        <p className="card__button" onClick={decrementNumber}>
+        <p className="card__button" onClick={decrementCount}>
           -
         </p>
-        <p className="card__number">{number}</p>
-        <p className="card__button" onClick={incrementNumber}>
+        <p className="card__number">{count}</p>
+        <p className="card__button" onClick={incrementCount}>
           +
         </p>
       </div>
