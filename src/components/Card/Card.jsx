@@ -9,7 +9,6 @@ const Card = ({ name, role }) => {
       <div className="card__counter">
         <p className="card__button">-</p>
         <p className="card__number">0</p>
-        {/* <p className="card__number">{ticketsToDo}</p> */}
         <p className="card__button">+</p>
       </div>
     </div>
