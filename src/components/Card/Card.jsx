@@ -12,8 +12,18 @@ const Card = ({ name, role }) => {
     setCount(count + 1);
   };
 
+  const getCardClass = () => {
+    let updatedCardClass = "card card--green";
+    if (count > 4) {
+      updatedCardClass = count > 9 ? "card card--red" : "card card--orange";
+    }
+    return updatedCardClass;
+  };
+
+  const classNameVar = getCardClass();
+
   return (
-    <div className="card">
+    <div className={classNameVar}>
       <div className="card__text">
         <p className="card__title">{name}</p>
         <p className="card__role">{role}</p>

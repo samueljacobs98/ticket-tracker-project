@@ -15,6 +15,17 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  &--green {
+    border-right: 6px solid $colour-card-green;
+  }
+  &--orange {
+    border-right: 6px solid $colour-card-orange;
+  }
+  &--red {
+    border-right: 6px solid $colour-card-red;
+  }
+
   .card__text {
     .card__title {
       font-size: $card-title-size;
