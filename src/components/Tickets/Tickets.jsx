@@ -4,7 +4,7 @@ import "./Tickets.scss";
 
 const Tickets = ({ teamData }) => {
   const cardListJSX = teamData.map((ticket) => {
-    return <Card name={ticket.name} role={ticket.role} />;
+    return <Card key={ticket.id} name={ticket.name} role={ticket.role} />;
   });
   return <div className="tickets">{cardListJSX}</div>;
 };

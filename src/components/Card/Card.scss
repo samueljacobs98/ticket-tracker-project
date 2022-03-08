@@ -9,17 +9,23 @@
   text-align: center;
 
   padding: $card-padding;
-  padding-bottom: 0;
+  padding-bottom: calc($card-padding / 2);
 
-  .card__title {
-    font-size: $card-title-size;
-    font-weight: $card-title-weight;
-    margin-bottom: 6px;
-  }
-  .card__role {
-    font-size: $card-role-size;
-    margin-bottom: 16px;
-    color: $colour-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .card__text {
+    .card__title {
+      font-size: $card-title-size;
+      font-weight: $card-title-weight;
+      margin-bottom: 6px;
+    }
+    .card__role {
+      font-size: $card-role-size;
+      margin-bottom: 16px;
+      color: $colour-grey;
+    }
   }
   .card__counter {
     display: flex;
@@ -28,6 +34,7 @@
     font-size: 3.4rem;
     .card__number {
       font-weight: bold;
+      margin: 0 12px;
     }
     .card__button:hover {
       cursor: pointer;
