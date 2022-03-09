@@ -2,25 +2,16 @@ import React, { useState } from "react";
 
 import "./Card.scss";
 
-const Card = ({ name, role }) => {
-  const [count, setCount] = useState(0);
-
-  const decrementCount = () => {
-    if (count) setCount(count - 1);
-  };
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
-
-  const getCardClass = () => {
-    let updatedCardClass = "card card--green";
-    if (count > 4) {
-      updatedCardClass = count > 9 ? "card card--red" : "card card--orange";
-    }
-    return updatedCardClass;
-  };
-
-  const classNameVar = getCardClass();
+const Card = ({
+  id,
+  name,
+  role,
+  count,
+  classNameVar,
+  incrementCount,
+  decrementCount,
+}) => {
+  const index = id - 1;
 
   return (
     <div className={classNameVar}>
@@ -29,11 +20,17 @@ const Card = ({ name, role }) => {
         <p className="card__role">{role}</p>
       </div>
       <div className="card__counter">
-        <p className="card__button" onClick={decrementCount}>
+        <p
+          className={`card__button card__button--${index}`}
+          onClick={decrementCount}
+        >
           -
         </p>
         <p className="card__number">{count}</p>
-        <p className="card__button" onClick={incrementCount}>
+        <p
+          className={`card__button card__button--${index}`}
+          onClick={incrementCount}
+        >
           +
         </p>
       </div>
