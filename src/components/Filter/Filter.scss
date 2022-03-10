@@ -1,0 +1,50 @@
+@use "../../assets/scss/variables" as *;
+
+.filter-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-$tickets-margin-top + $filter-margin);
+
+  color: $colour-primary;
+
+  &__bars {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__bar {
+    width: 80px;
+    height: 8px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--red {
+      background-color: $colour-card-red;
+    }
+    &--orange {
+      background-color: $colour-card-orange;
+    }
+    &--green {
+      background-color: $colour-card-green;
+    }
+  }
+
+  &__reset {
+    margin-top: 5px;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
