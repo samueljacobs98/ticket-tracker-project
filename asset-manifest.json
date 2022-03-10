@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ticket-tracker-project/static/css/main.940dca4f.css",
-    "main.js": "/ticket-tracker-project/static/js/main.b069ed96.js",
+    "main.css": "/ticket-tracker-project/static/css/main.60a48951.css",
+    "main.js": "/ticket-tracker-project/static/js/main.a77e0416.js",
     "static/js/787.429cb22d.chunk.js": "/ticket-tracker-project/static/js/787.429cb22d.chunk.js",
     "static/media/bg-right.svg": "/ticket-tracker-project/static/media/bg-right.2259d28752a27fb6d86b795483e6e51a.svg",
     "static/media/bg-left.svg": "/ticket-tracker-project/static/media/bg-left.2996eb22b53fce1bd3919fccfb4949e9.svg",
     "index.html": "/ticket-tracker-project/index.html",
-    "main.940dca4f.css.map": "/ticket-tracker-project/static/css/main.940dca4f.css.map",
-    "main.b069ed96.js.map": "/ticket-tracker-project/static/js/main.b069ed96.js.map",
+    "main.60a48951.css.map": "/ticket-tracker-project/static/css/main.60a48951.css.map",
+    "main.a77e0416.js.map": "/ticket-tracker-project/static/js/main.a77e0416.js.map",
     "787.429cb22d.chunk.js.map": "/ticket-tracker-project/static/js/787.429cb22d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.940dca4f.css",
-    "static/js/main.b069ed96.js"
+    "static/css/main.60a48951.css",
+    "static/js/main.a77e0416.js"
   ]
 }
