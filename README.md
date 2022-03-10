@@ -17,6 +17,8 @@ Lifting up card state enabled features to be added such as filtering cards visib
 
 Card colour was another feature enabled by lifting up the state of each card. By lifting up card state an average count could be calculated. Therefore, each card could be coloured in relation to all other cards. This feature was added so that members of a team using the ticket tracker could assess performance and progress in relation to one another.
 
+Buttons were used for all interactive elements so that the user can interact with the app entirely without a mouse if necessary.
+
 HTML Canvas was integrated to make improve the aesthetic of the website. Using an OOP approach, a random number of particles (within limits) at random locations on the page with random colours are created and rendered when the page is loaded.
 
 Noticable on smaller screens, a parallax scroll was added to add movement to the background shapes, giving the page a more dynamic feel.
