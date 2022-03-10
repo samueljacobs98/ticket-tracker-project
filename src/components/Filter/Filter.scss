@@ -22,7 +22,7 @@
 
   &__bar {
     width: 80px;
-    height: 8px;
+    height: 12px;
 
     &:hover {
       cursor: pointer;
@@ -42,6 +42,11 @@
   &__reset {
     margin-top: 5px;
     font-weight: 600;
+    font-size: $font-size-normal;
+
+    color: $colour-primary;
+    border: none;
+    background-color: transparent;
 
     &:hover {
       cursor: pointer;

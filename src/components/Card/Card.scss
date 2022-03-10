@@ -47,6 +47,13 @@
       font-weight: bold;
       margin: 0 12px;
     }
+
+    .card__button {
+      font-size: $card-button-size;
+      border: none;
+      background-color: transparent;
+    }
+
     .card__button:hover {
       cursor: pointer;
     }

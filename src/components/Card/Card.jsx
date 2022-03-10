@@ -12,19 +12,19 @@ const Card = ({ id, name, role, count, classNameVar, alterCount }) => {
         <p className="card__role">{role}</p>
       </div>
       <div className="card__counter">
-        <p
+        <button
           className={`card__button card__button--${index}`}
           onClick={alterCount}
         >
           -
-        </p>
+        </button>
         <p className="card__number">{count}</p>
-        <p
+        <button
           className={`card__button card__button--${index}`}
           onClick={alterCount}
         >
           +
-        </p>
+        </button>
       </div>
     </div>
   );

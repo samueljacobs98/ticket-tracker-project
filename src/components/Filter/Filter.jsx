@@ -7,22 +7,22 @@ const Filter = ({ handleClick }) => {
       <div className="filter-container">
         <h3 className="filter-container__heading">Filter by Colour</h3>
         <div className="filter-container__bars">
-          <div
+          <button
             className="filter-container__bar filter-container__bar--red"
             onClick={handleClick}
-          ></div>
-          <div
+          ></button>
+          <button
             className="filter-container__bar filter-container__bar--orange"
             onClick={handleClick}
-          ></div>
-          <div
+          ></button>
+          <button
             className="filter-container__bar filter-container__bar--green"
             onClick={handleClick}
-          ></div>
+          ></button>
         </div>
-        <p className="filter-container__reset" onClick={handleClick}>
+        <button className="filter-container__reset" onClick={handleClick}>
           reset
-        </p>
+        </button>
       </div>
     </>
   );
