@@ -2,15 +2,7 @@ import React, { useState } from "react";
 
 import "./Card.scss";
 
-const Card = ({
-  id,
-  name,
-  role,
-  count,
-  classNameVar,
-  incrementCount,
-  decrementCount,
-}) => {
+const Card = ({ id, name, role, count, classNameVar, alterCount }) => {
   const index = id - 1;
 
   return (
@@ -22,14 +14,14 @@ const Card = ({
       <div className="card__counter">
         <p
           className={`card__button card__button--${index}`}
-          onClick={decrementCount}
+          onClick={alterCount}
         >
           -
         </p>
         <p className="card__number">{count}</p>
         <p
           className={`card__button card__button--${index}`}
-          onClick={incrementCount}
+          onClick={alterCount}
         >
           +
         </p>
