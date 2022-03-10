@@ -32,38 +32,30 @@ const Tickets = ({ teamData }) => {
     return "card card--orange";
   };
 
+  const getNewCount = (index, ticketIndex, isAdd, count) => {
+    if (ticketIndex != index || (!isAdd && !count)) return count; // if ticket index isn't the current index or if operation is decrement and count is 0 return count unchanged
+    return isAdd ? count + 1 : count - 1;
+  };
+
   const alterCount = (event) => {
-    const operatorAdd = event.target.innerText === "+";
+    const isAdd = event.target.innerText === "+";
     const index = event.target.className.slice(27);
     setData(
       data.map(({ classNameVar, count, ...rest }, ticketIndex) => {
+        const newCount = getNewCount(index, ticketIndex, isAdd, count);
         return {
           ...rest,
-          classNameVar:
-            ticketIndex == index // Check if correct card to alter count
-              ? operatorAdd // Check whether to increment or decrement
-                ? getClass(count + 1) // If increment, add one to count and get relevent class
-                : count > 0 // If decrement, check if count is 0 to avoid negatives
-                ? getClass(count - 1)
-                : getClass(count) // If count is 0, don't decrement or change class
-              : getClass(count),
-          count:
-            ticketIndex == index
-              ? operatorAdd
-                ? count + 1
-                : count > 0
-                ? count - 1
-                : count
-              : count,
+          classNameVar: getClass(newCount),
+          count: newCount,
         };
       })
     );
   };
 
   const updateVisibility = (colour) => {
-    if (colour === "reset") {
+    if (colour === "all colours") {
       setData(
-        data.map(({ visible, ...rest }, ticketIndex) => {
+        data.map(({ visible, ...rest }) => {
           return {
             ...rest,
             visible: true,
@@ -73,7 +65,7 @@ const Tickets = ({ teamData }) => {
     }
     if (["red", "orange", "green"].includes(colour)) {
       setData(
-        data.map(({ visible, classNameVar, ...rest }, ticketIndex) => {
+        data.map(({ visible, classNameVar, ...rest }) => {
           return {
             ...rest,
             classNameVar: classNameVar,
@@ -86,7 +78,7 @@ const Tickets = ({ teamData }) => {
 
   const handleClick = (event) => {
     const colour = event.target.className.includes("reset")
-      ? "reset"
+      ? "all colours"
       : event.target.className.slice(45);
     updateVisibility(colour);
   };
