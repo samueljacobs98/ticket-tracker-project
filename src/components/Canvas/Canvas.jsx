@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import PropTypes from "prop-types";
 import "./Canvas.scss";
 
 const Canvas = ({ height, width }) => {
@@ -17,16 +16,6 @@ const Canvas = ({ height, width }) => {
       this.pos = new Vector(x, y);
       this.vel = new Vector(-1 + Math.random() * 2, -1 + Math.random() * 2);
       this.radius = 4 + Math.random() * 8;
-    }
-
-    bounce() {
-      if (this.pos.x <= 0 || this.pos.x >= width) this.vel.x *= -1;
-      if (this.pos.y <= 0 || this.pos.y >= height) this.vel.y *= -1;
-    }
-
-    update() {
-      this.pos.x += this.vel.x;
-      this.pos.y += this.vel.y;
     }
 
     draw(ctx) {
@@ -63,18 +52,12 @@ const Canvas = ({ height, width }) => {
   useEffect(() => {
     const context = canvas.current.getContext("2d");
     agentsArr.forEach((agent) => {
-      agent.update();
       agent.draw(context);
-      agent.bounce(width, height);
     });
   });
   return (
     <canvas ref={canvas} height={height} width={width} className="canvas" />
   );
-};
-Canvas.propTypes = {
-  height: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
 };
 
 export default Canvas;

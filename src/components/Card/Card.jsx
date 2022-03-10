@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 import "./Card.scss";
 
 const Card = ({ id, name, role, count, classNameVar, alterCount }) => {
